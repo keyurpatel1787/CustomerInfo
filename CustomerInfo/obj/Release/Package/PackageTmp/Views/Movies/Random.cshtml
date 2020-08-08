@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MoshMVC.Models.Movie>
+
+@{
+    ViewBag.Title = "Random";
+}
+
+<h2>List of Movies</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var movies in Model)
+        {
+
+        <tr>
+            <td> @Html.ActionLink(movies.Name, "Detail", "Movies", new { Id = movies.Id }, null)   </td>
+        </tr>
+
+        }
+    </tbody>
+
+</table>
+

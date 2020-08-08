@@ -1,0 +1,23 @@
+﻿@model MoshMVC.Models.Customer
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Customers</h2>
+
+
+@if (Model != null)
+{
+    <h2> @Model.Name </h2>
+    <div>MembershipType :  @Model.MembershipType.Name</div>
+    if (@Model.Birthdate != null)
+    {
+        <div>Birthdate :  @Model.Birthdate</div>
+    }
+}
+
+
+else
+{ <h2> No Customers found </h2>}
+
+
